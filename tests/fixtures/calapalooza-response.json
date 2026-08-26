@@ -1,0 +1,21 @@
+{
+  "events": [
+    {
+      "kind": "single",
+      "title": "Calapalooza",
+      "startDate": "2026-08-27",
+      "endDate": "",
+      "startTime": "12:00",
+      "endTime": "18:00",
+      "allDay": false,
+      "timeZone": "America/Los_Angeles",
+      "location": "Upper Sproul, Dwinelle, Wheeler Plaza (near Sather Gate), and Memorial Glade",
+      "notes": "Over 300 student organizations, performances, music, and games.",
+      "recurrence": null,
+      "confidence": 0.98,
+      "warnings": ["The year 2026 was inferred from the current date and stated weekday."],
+      "evidence": "Thursday, August 27th, from 12 pm to 6 pm",
+      "sourceUrl": "https://example.edu/email"
+    }
+  ]
+}

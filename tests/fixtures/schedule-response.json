@@ -1,0 +1,38 @@
+{
+  "events": [
+    {
+      "kind": "recurring",
+      "title": "Lecture – 001 – 29147",
+      "startDate": "2026-08-26",
+      "endDate": "",
+      "startTime": "12:00",
+      "endTime": "12:59",
+      "allDay": false,
+      "timeZone": "America/Los_Angeles",
+      "location": "Wheeler 150",
+      "notes": "Instructors: Kay Ousterhout, John DeNero",
+      "recurrence": { "weekdays": ["MO", "WE", "FR"], "untilDate": "2026-12-11", "excludedDates": [] },
+      "confidence": 0.99,
+      "warnings": [],
+      "evidence": "08/26/2026 - 12/11/2026 · Days: Monday Wednesday Friday · Times: 12:00PM to 12:59PM",
+      "sourceUrl": "https://example.edu/schedule"
+    },
+    {
+      "kind": "single",
+      "title": "Lecture 001 Final Exam",
+      "startDate": "2026-12-17",
+      "endDate": "",
+      "startTime": "15:00",
+      "endTime": "18:00",
+      "allDay": false,
+      "timeZone": "America/Los_Angeles",
+      "location": "Wheeler 150",
+      "notes": "",
+      "recurrence": null,
+      "confidence": 0.96,
+      "warnings": [],
+      "evidence": "Final: Thursday, December 17 from 3 PM to 6 PM",
+      "sourceUrl": "https://example.edu/schedule"
+    }
+  ]
+}

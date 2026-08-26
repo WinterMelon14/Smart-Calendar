@@ -1,0 +1,68 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "events": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "itemType": { "type": "string", "enum": ["event", "task"] },
+          "kind": { "type": "string", "enum": ["single", "recurring"] },
+          "title": { "type": "string" },
+          "startDate": { "type": "string", "description": "YYYY-MM-DD" },
+          "endDate": { "type": "string", "description": "YYYY-MM-DD or empty string" },
+          "startTime": { "type": "string", "description": "24-hour HH:mm or empty string" },
+          "endTime": { "type": "string", "description": "24-hour HH:mm or empty string" },
+          "allDay": { "type": "boolean" },
+          "timeZone": { "type": "string", "description": "IANA time zone" },
+          "location": { "type": "string" },
+          "notes": { "type": "string" },
+          "recurrence": {
+            "anyOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "weekdays": {
+                    "type": "array",
+                    "items": { "type": "string", "enum": ["MO", "TU", "WE", "TH", "FR", "SA", "SU"] }
+                  },
+                  "untilDate": { "type": "string", "description": "YYYY-MM-DD" },
+                  "excludedDates": { "type": "array", "items": { "type": "string", "description": "YYYY-MM-DD" } }
+                },
+                "required": ["weekdays", "untilDate", "excludedDates"]
+              },
+              { "type": "null" }
+            ]
+          },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+          "warnings": { "type": "array", "items": { "type": "string" } },
+          "evidence": { "type": "string" },
+          "sourceUrl": { "type": "string" }
+        },
+        "required": [
+          "itemType",
+          "kind",
+          "title",
+          "startDate",
+          "endDate",
+          "startTime",
+          "endTime",
+          "allDay",
+          "timeZone",
+          "location",
+          "notes",
+          "recurrence",
+          "confidence",
+          "warnings",
+          "evidence",
+          "sourceUrl"
+        ]
+      }
+    }
+  },
+  "required": ["events"]
+}
