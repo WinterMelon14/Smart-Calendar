@@ -1,8 +1,0 @@
-node_modules/
-.pnpm-store/
-.wxt/
-.output/
-.env.local
-coverage/
-*.zip
-*.pem
